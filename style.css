@@ -2,145 +2,140 @@ body{
     margin:0;
     padding:0;
     background-color: #fff;
-    width: 1920px;
+    max-width: 1920px;
     font-family: "Montserrat", "sans-serif";
 }
+.wrapper{
+    max-width:1110px;
+    margin: 0 auto;
+}
 .header-page{
-    width: 1920px;
+    max-width: 1920px;
     height: 800px;
     background-color: #f9f6f1;
 }
-
-
-ul{
+/*Навигационное меню*/
+.nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}    
+.nav-menu{
    list-style: none;
    padding: 0;
    margin:0; 
    display: flex;
+   flex-wrap: wrap;
 }
-.main-menu{
-    padding-top: 61px;
-    order: 1;
-    padding-right: 56px;
-    
-}
-a{
+.link-item{
     text-decoration: none;
     font-weight: 500;
     color: black;
     font-size: 14px;
-    line-height: 17px;
-    
+    line-height: 17px;    
 }
-.main-menu li{
-    margin-right: 45px;
+.link-item:hover{
+    color: #D84033;    
 }
-.header-top{
-    display:flex;
-    justify-content: center;
-     
-}
-.logo{
-    align-self: center;
-    order: 2;
-    padding-top: 50px;
-      
-}
-.menu-2{
-    order: 3;
-    padding-top: 61px;
-    padding-right: 66px;
-    padding-left: 90px;
-}
-.menu-2 li{
+.nav-item{
     margin-right: 35px;
 }
+.nav-item:first-child{
+    padding-left:10px;
+}
+.nav-item:hover{
+    transform:scale(1.1);
+}
 .vector{
-order: 4;
-padding-top: 54px;
 padding-right: 15px;
 }
 .group{
-order: 5;
-padding-top: 54px;
+    padding-right: 10px;
 }
-.header-middle{
+/*Баннер со скидкой*/
+.sale-box{
     margin-top: 126px;
-    width: 1110px;
+    width: 100%;
     height: 337px;
-    
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
-.image{
+.shoes{
     background-image:url(image/running_shoes_PNG5823.png);
-    background-size: 556px 337px;
+    background-size: cover;
     background-repeat: no-repeat;
-    float: right;
-    width: 556px;
-    height: 337px;
+    width: 49%;
+    height: 355px;
+    margin-right: 10px;
 }
 .price{
-    float: right;
     margin-top: 40px;
     margin-right: 7px;
     font-weight: 700;
 }
-.del{
+.old-price{
     font-size: 24px;
     text-decoration:line-through;
-    margin: 0;
     text-align: right;
     line-height: 29px;
 }
-.red{
+.new-price{
     margin: 0;
     font-size: 42px;
     color: #D84033;
     text-align: right;
 }
 .text-sale{
-    margin: 0;
-    width: 570px;
-    height:224px;
-    text-align: left;
+    width: 50%;
 }
-.winter{
+.sale-description{
     font-style: normal;
     font-size: 30px;
-    margin: 0;
 }
-.sale-90{
+.title-sale{
     margin: 0;
     font-weight:700 ;
     font-size: 55px;
     margin-top: 35px;
 }
-.model{
+.btn{
     width: 240px;
     height: 55px;
     margin-top: 55px;
+    margin-left: 10px;
     background-color:#D7B399 ;
     font-size: 16px;
-    color: #fff;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
     border: none;
+    cursor: pointer;
 }
+.btn:hover{
+    background-color: #daa078;
+    border: 1px solid #8D8D8D;
+}
+.sale-description,
+.title-sale{
+    padding-left: 10px;
+}
+/*Доставка*/
 .delivery{
     margin: 0;
-    width: 1920px;
+    width: 100%;
     height: 235px;
     background-color:#212121 ;
     text-align: center;
-    display: table-cell;
     vertical-align: middle;
 }
-h3{
+.title-delivery{
     margin: 0;
     color: #fff;
     text-transform: uppercase; 
     font-size: 30px;
+    padding-top:70px;
 }
-.p-delivery{
+.delivery-description{
     color: #fff;
     font-size: 21px;
     font-weight: 300;
@@ -150,167 +145,151 @@ h3{
 .normal{
     font-weight: 400;
 }
-.collection{
+/*Коллекции*/
+.collection-page{
+    max-width: 1920px;
+    background-color: #f9f6f1;
     margin: 0;
-    width: 1920px;
+}
+.collection-box{
+    margin: 0;
+    width: 100%;
     height: 250px;
     background-color: lightyellow;
+    display: flex;
+    flex-wrap: wrap;
 }
-.man-collection{
+.man-collection,
+.woman-collection{
     margin: 0;
-    width: 960px;
+    width: 50%;
     height: 250px;
     background-color: #f9f6f1;
-    float: left;
 }
-.men{
-    margin-right: 15px;
-    float: right;
-    margin-top: 79px;
+.man-collection{
+    background-image: url(image/Man.png);
+    background-repeat: no-repeat;
+    background-size: 190px 171px;
+    background-position: right bottom;
 }
-.collect{
+.woman-collection{
+    background-color: #f4f4f4;
+    background-image: url(image/Woman.png);
+    background-repeat: no-repeat;
+    background-size: 190px 171px;
+    background-position: right bottom;
+
+}
+.man-title,
+.woman-title{
     padding-top: 60px;
-    margin: 0;
     font-weight: 500;
     font-size: 24px;
-    text-transform: uppercase;
-    padding-left: 426px;
+    margin: 0;
+    padding-left: 10px;
 }
 .roboto{
     font-family: "Roboto", "sans-serif";
     font-weight: 300;
 }
-.clothes{
-    font-weight: 300;
+.man-description,
+.woman-description{
     font-size: 16px;
-    margin: 0;
-    margin-top: 25px;
-    padding-left: 426px;
+    font-weight: 300;
+    padding-left: 10px;
 }
- collect-m{
-    margin-left: 426px;
-}
-.arrow{
-    margin: 0;
+.btn-collection{
     width: 80px;
     height: 30px;
-    background-color: #D7B399;
-    margin-left: 426px;
+    background-color: #D7B399;  
     color: #fff;
     margin-top: 40px;
     border: none;
     font-size: 160%;
-    line-height: 20px;
-    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
 }
-.woman-collection{
-    margin: 0;
-    width: 960px;
-    height: 250px;
-    float: right;
-    background-color: #f4f4f4;
-    
+.btn-collection:hover{
+    background-color: #daa078;
+    border: 1px solid #8D8D8D;
 }
-.woman{
-    margin-top: 79px;
-    margin-right: 418px;
-    float: right;
-}
-#w{
-    margin: 0;
-    padding: 0;
-    margin-left: 35px;
-    margin-top: 60px;
-}
-#clothes-w{
-    margin: 0;
-    padding: 0;
-    margin-left: 36px;
-    margin-top:25px;
-
-}
-#arrow-w{
-    margin: 0;
-    padding: 0;
-    margin-left: 35px;
-    margin-top: 40px;
-}
+/*Фотогалерея*/
 .gallery{
     margin: 0;
-    width: 1110px;
-    height: 472px;
+    max-width: 1110px;
+    height: 520px;
     background-color:#f4f4f4;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-   
-}
-.gallery-ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 277px 277px 277px 277px;
-    gap: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;    
 }
-.absolute{
-    position: absolute;
-    margin-top: 186px;
-    margin-left: 30px;
-    font-size: 21px;
-    font-weight: 300;
-
+.image-item{
+    width:150px;
+    height:200px;
+    padding:15px;
+    display: block;
+    margin: 0 auto;
 }
-h2{
-    margin: 0;
-    padding: 0;
-    margin-top: 150px;
-    margin-bottom: 103px;
+.name-item{
     text-align: center;
-    font-weight: 700;
+    border-top:2px solid rgb(180, 175, 175);
+    margin: 0;
+}
+/*Новые модели*/
+.new-model-title{
+    margin-top: 150px;
+    margin-bottom: 100px;
     font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
 }
-.new-item{
+.card-box{
     margin: 0;
-    padding: 0;
-    width: 1110px;
-    height: 502px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 450px;
+    display:flex;
+    justify-content: space-between;
 }
-.card-current{
-    margin: 0;
-    padding: 0;
-}
-.card{
-    width: 255px;
-    padding: 25px;
+.card-model{
+    width:22%;
     border: 1px dashed #D7B399;
 }
-.card-text{
+.card-image{
+    padding: 20px;
+    width: 200px;
+    height: 300px;
+}
+.card-name{
     text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     margin-top: 25px;
 }
-.price-card{
+.card-price{
     text-align: center;
     font-weight: 700;
     font-size: 18px;
     color: #D7B399;
 }
-#card-button{
-    margin: 0;
-    padding: 0;
-    margin-top: 103px;
-    margin-left: 445px;
-    
+.btn-model{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}  
+/*Скидки и подарки*/
+.gift-title{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
 }
 .sale-gifts{
     margin: 0;
     padding: 0;
-    width: 1920px;
+    max-width: 1920px;
     height: 180px;
     background-color:#212121 ;
     margin-top: 150px;
@@ -318,7 +297,7 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.subcribe{
+.email{
     width: 255px;
     height: 40px;
     font-weight: 300;
@@ -330,16 +309,25 @@ h2{
     padding-left: 20px;
     
 }
-#subcribe{
-    margin: 0;
+.btn-gifts{
     width: 185px;
     height: 40px;
-    
+    margin:0;
 }
+    /*Скидки*/
+.sale-box-title{
+    margin-top: 150px;
+    margin-bottom: 100px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}    
+/*Футер*/
 .footer-top{
     margin: 0;
     padding: 0;
-    width: 1920px;
+    max-width: 1920px;
     height: 363px;
     background-color: #212121;
     margin-top: 150px;
@@ -347,33 +335,29 @@ h2{
     font-size: 14px;
     line-height: 22px;
     color: #fff;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.footer-ul{
+    display: flex;
+    list-style: none;
 }
 .footer-logo{
     width: 201px;
-    text-align: left;
-    float: left;
-    margin-left: 405px;
 }
-.logo-fot{
-    margin-top: 73px;
-    margin-bottom: 18px;
-}
+
 .block{
     display: block;
-}
-.links{
-    float: right;
-    width: 700px;
-    height: 151px;
-    margin-right: 399px;
-    margin-top: 80px;
-}
-.links ul{
-    justify-content: space-between;
+    list-style: none;
 }
 .block li{
     margin-bottom: 10px;
+    cursor: pointer;
+}
+.block li:hover{
+    color: #D84033;
+    transform: scale(1.05);
 }
 .heads{
     margin: 0;
